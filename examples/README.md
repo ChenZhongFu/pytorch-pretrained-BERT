@@ -9,11 +9,11 @@ similar API between the different models.
 | [Language Generation](#language-generation) | Conditional text generation using the auto-regressive models of the library: GPT, GPT-2, Transformer-XL and XLNet.                                         |
 | [GLUE](#glue) | Examples running BERT/XLM/XLNet/RoBERTa on the 9 GLUE tasks. Examples feature distributed training as well as half-precision.                              |
 | [SQuAD](#squad) | Using BERT for question answering, examples with distributed training.                                                                                  |
-| [Multiple Choice](#multiple choice) | Examples running BERT/XLNet/RoBERTa on the SWAG/RACE/ARC tasks. 
+| [Multiple Choice](#multiple-choice) | Examples running BERT/XLNet/RoBERTa on the SWAG/RACE/ARC tasks. 
 
 ## Language model fine-tuning
 
-Based on the script [`run_lm_finetuning.py`](https://github.com/huggingface/pytorch-transformers/blob/master/examples/run_lm_finetuning.py).
+Based on the script [`run_lm_finetuning.py`](https://github.com/huggingface/transformers/blob/master/examples/run_lm_finetuning.py).
 
 Fine-tuning the library models for language modeling on a text dataset for GPT, GPT-2, BERT and RoBERTa (DistilBERT 
 to be added soon). GPT and GPT-2 are fine-tuned using a causal language modeling (CLM) loss while BERT and RoBERTa 
@@ -75,7 +75,7 @@ python run_lm_finetuning.py \
 
 ## Language generation
 
-Based on the script [`run_generation.py`](https://github.com/huggingface/pytorch-transformers/blob/master/examples/run_generation.py).
+Based on the script [`run_generation.py`](https://github.com/huggingface/transformers/blob/master/examples/run_generation.py).
 
 Conditional text generation using the auto-regressive models of the library: GPT, GPT-2, Transformer-XL and XLNet.
 A similar script is used for our official demo [Write With Transfomer](https://transformer.huggingface.co), where you
@@ -91,7 +91,7 @@ python run_generation.py \
 
 ## GLUE
 
-Based on the script [`run_glue.py`](https://github.com/huggingface/pytorch-transformers/blob/master/examples/run_glue.py).
+Based on the script [`run_glue.py`](https://github.com/huggingface/transformers/blob/master/examples/run_glue.py).
 
 Fine-tuning the library models for sequence classification on the GLUE benchmark: [General Language Understanding 
 Evaluation](https://gluebenchmark.com/). This script can fine-tune the following models: BERT, XLM, XLNet and RoBERTa. 
@@ -283,17 +283,17 @@ The results  are the following:
   loss = 0.04755385363816904
 ```
 
-##Multiple Choice
+## Multiple Choice
 
 Based on the script [`run_multiple_choice.py`]().
 
 #### Fine-tuning on SWAG
 Download [swag](https://github.com/rowanz/swagaf/tree/master/data) data
 
-```
+```bash
 #training on 4 tesla V100(16GB) GPUS
 export SWAG_DIR=/path/to/swag_data_dir
-python ./examples/single_model_scripts/run_multiple_choice.py \
+python ./examples/run_multiple_choice.py \
 --model_type roberta \
 --task_name swag \
 --model_name_or_path roberta-base \
@@ -319,7 +319,7 @@ eval_loss = 0.44457291918821606
 
 ## SQuAD
 
-Based on the script [`run_squad.py`](https://github.com/huggingface/pytorch-transformers/blob/master/examples/run_squad.py).
+Based on the script [`run_squad.py`](https://github.com/huggingface/transformers/blob/master/examples/run_squad.py).
 
 #### Fine-tuning on SQuAD
 
